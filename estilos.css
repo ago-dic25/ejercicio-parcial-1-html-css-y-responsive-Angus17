@@ -1,1 +1,86 @@
+*{
+    font-family:"Roboto", sans-serif;
+}
 
+header{
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 10px 20px;
+}
+
+header nav{
+    padding-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+main{
+    background-color: lightsalmon;
+}
+
+
+main .izquierdagrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Añadir tambien sombra a las .cards .card */
+
+main .cards .card {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    text-align: center;
+}
+
+main img{
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Intervalo en el media query */
+
+@media screen {
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    main .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Seccion de cards en dos columnas */
+    main .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Seccion de cards en tres columnas */
+    main .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+footer {
+    background-color: lightseagreen;
+
+}
